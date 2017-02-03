@@ -222,7 +222,7 @@ class Scanner(object):
                                 module_type = imp.PY_COMPILED
                         # only scrape members from non-orphaned source files
                         # and package directories
-                        if module_type in (imp.PY_SOURCE, imp.PKG_DIRECTORY):
+                        if module_type in (imp.PY_SOURCE, imp.PY_COMPILED, imp.PKG_DIRECTORY):
                             # NB: use __import__(modname) rather than
                             # loader.load_module(modname) to prevent
                             # inappropriate double-execution of module code
